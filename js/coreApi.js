@@ -1,27 +1,18 @@
 
-
 window.addEventListener('DOMContentLoaded', (event) => {
     
+    $.get( "https://json.geoiplookup.io", function( data ) {
 
-   
-
-    $.get( "https://www.cloudflare.com/cdn-cgi/trace", function( data ) {
-
-   var e= document.getElementsByTagName('p')[0];
-   e.innerHTML=data; 
-  
-   e.innerText = e.textContent.replaceAll("=",":")
-
-
-
+var  cont=  document.getElementsByClassName('w3-container')[2];
+    for (const key in data) {
+        var x = document.createElement('p');
     
+        x.innerHTML =key +": &nbsp "+ data[key];
+
+        cont.appendChild(x); 
+    }
 
     });
-
-    
-
-
-
 })
 
  
