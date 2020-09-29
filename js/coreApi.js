@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 var  cont=  document.getElementsByClassName('w3-container')[2];
     for (const key in data) {
-        var x = document.createElement('p');
+        var x = document.createElement('li');
     
         x.innerHTML =key +": &nbsp "+ data[key];
 
